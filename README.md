@@ -13,12 +13,9 @@ Este trabajo práctico tiene como objetivo principal conocer las mejores prácti
 
 ---
 
-<aside>
-💡 **Obligatorio:** Recorda abrir un repositorio público (puede ser Github, Gitlab, Bitbucket…) 
+💡 **Obligatorio:** Recorda abrir un repositorio público (puede ser Github, Gitlab, Bitbucket…)
 **Nice to Have:** Deseable que el proyecto esté deployado en un server (gratuito)
 **Nice to Have:** Deseable que el proyecto tenga testings
-
-</aside>
 
 1. Crear un proyecto llamado “**API**”.
 2. El proyecto debe ser creado en **Node** con **Express**.
