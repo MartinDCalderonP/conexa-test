@@ -5,6 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
+  body-parser@<1.20.6: ^1.20.6
   diff@<4.0.4: '>=4.0.4'
   ip-address@<=10.1.0: '>=10.1.1'
   mongoose@>=7.0.0 <=7.8.8: '>=7.8.9'
@@ -49,8 +50,8 @@ importers:
         specifier: ^9.0.0
         version: 9.0.3
       mongoose:
-        specifier: ^9.7.2
-        version: 9.7.2
+        specifier: ^9.8.1
+        version: 9.8.1
       morgan:
         specifier: ^1.11.0
         version: 1.11.0
@@ -79,6 +80,9 @@ packages:
 
   '@mongodb-js/saslprep@1.4.13':
     resolution: {integrity: sha512-E3Sv4eCYAlKYUTx8S3ioQcDUscOif+8zZ5OnW1IzJ+Tt+EO+ke8mn+Y3FX6N1H79picwbdOavVOb1jPi2EOyrg==}
+
+  '@standard-schema/spec@1.1.0':
+    resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
   '@tsconfig/node10@1.0.12':
     resolution: {integrity: sha512-UCYBaeFvM11aU2y3YPZ//O5Rhj+xKyzy7mvcIoAjASbigy8mHMryP5cK7dgjlz2hWxh1g5pLw084E0a/wlUSFQ==}
@@ -169,8 +173,8 @@ packages:
     resolution: {integrity: sha512-NF+epuEdnUYVlGuhaxbbq+dvJttwLnGY+YixlXlME5KpQ5W3CnXA5cVTneY3SPbPDRkcjMbifrwmFYcClgOZeg==}
     engines: {node: '>= 0.8'}
 
-  body-parser@1.20.4:
-    resolution: {integrity: sha512-ZTgYYLMOXY9qKU/57FAo8F+HA2dGX7bqGc71txDRC1rS4frdFI5R7NhluHxH6M0YItAP0sHB4uqAOcYKxO6uGA==}
+  body-parser@1.20.6:
+    resolution: {integrity: sha512-p5tAzS57i5MV9fZFDj9LeIiTZEufbSe2eDozP+ElheSUq1m74CRq1jI4mYNDdVs9vQztXFLuk/Gd6BWTdwRJ5g==}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
 
   bson@7.3.1:
@@ -410,15 +414,15 @@ packages:
     resolution: {integrity: sha512-ZoS07RoFqpKYQwAk59qmrx8+jJHNHU30UjlU96QktiGn1ltvDr+vCznLX5DiUBLEpMAHatHNWV1nM/74ul66kA==}
     engines: {node: '>=20.19.0'}
 
-  mongodb@7.2.0:
-    resolution: {integrity: sha512-F/2+BMZtLVhY30ioZp0dAmZ+IRZMBqI+nrv6t5+9/1AIwCa8sMRC3jBf81lpxMhnZgqq8CoUD503Z1oZWq1/sw==}
+  mongodb@7.5.0:
+    resolution: {integrity: sha512-5FnrEDLnvp6ycUOGLNLLU33BfCx2qmp2mJjGPDwKLruYsVzXVSK5fsGpoDXvsXJwBfBsD7ebMRdawbDxC2814g==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       '@aws-sdk/credential-providers': ^3.806.0
       '@mongodb-js/zstd': ^7.0.0
       gcp-metadata: ^7.0.1
       kerberos: ^7.0.0
-      mongodb-client-encryption: '>=7.0.0 <7.1.0'
+      mongodb-client-encryption: ^7.2.0
       snappy: ^7.3.2
       socks: ^2.8.6
     peerDependenciesMeta:
@@ -437,8 +441,8 @@ packages:
       socks:
         optional: true
 
-  mongoose@9.7.2:
-    resolution: {integrity: sha512-VxxS3tjOGRIvhBMd84RR7L1WbDdm08Qq6V88VMq6jP6aE1Q+NlbTZDBtye2NAyO48i5kBFxM2oxfX0CPKNwCMg==}
+  mongoose@9.8.1:
+    resolution: {integrity: sha512-1ncioLSBWeFSXIiKw6aR4YYFAhpvS7uSbPpkzq5ELSP9PEScGkbzFg6Q0mNuHighosmgZPYPsY4sSIXqkY3/hw==}
     engines: {node: '>=20.19.0'}
 
   morgan@1.11.0:
@@ -645,6 +649,8 @@ snapshots:
     dependencies:
       sparse-bitfield: 3.0.3
 
+  '@standard-schema/spec@1.1.0': {}
+
   '@tsconfig/node10@1.0.12': {}
 
   '@tsconfig/node12@1.0.11': {}
@@ -743,7 +749,7 @@ snapshots:
     dependencies:
       safe-buffer: 5.1.2
 
-  body-parser@1.20.4:
+  body-parser@1.20.6:
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
@@ -837,7 +843,7 @@ snapshots:
     dependencies:
       accepts: 1.3.8
       array-flatten: 1.1.1
-      body-parser: 1.20.4
+      body-parser: 1.20.6
       content-disposition: 0.5.4
       content-type: 1.0.5
       cookie: 0.7.2
@@ -1004,16 +1010,17 @@ snapshots:
       '@types/whatwg-url': 13.0.0
       whatwg-url: 14.2.0
 
-  mongodb@7.2.0:
+  mongodb@7.5.0:
     dependencies:
       '@mongodb-js/saslprep': 1.4.13
       bson: 7.3.1
       mongodb-connection-string-url: 7.0.2
 
-  mongoose@9.7.2:
+  mongoose@9.8.1:
     dependencies:
+      '@standard-schema/spec': 1.1.0
       kareem: 3.3.0
-      mongodb: 7.2.0
+      mongodb: 7.5.0
       mpath: 0.9.0
       mquery: 6.0.0
       ms: 2.1.3
